@@ -66,8 +66,7 @@ class Env:
     proc = subprocess.run(
         cmd,
         input=in_str.encode(STR_ENCODING),
-        shell=True,
-        check=True,
+        shell=False, check=True,
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
     )
